@@ -1,7 +1,7 @@
 C++ := c++ -std=c++98
 RM := rm -rf
 NAME := program
-SRCS := main.cpp 
+SRCS := main.cpp
 SRC := $(addprefix $(SRC_DIR), $(SRCS))
 OBJ := $(SRCS:.cpp=.o)
 

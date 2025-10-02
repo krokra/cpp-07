@@ -15,7 +15,14 @@ public:
     Array& operator=(const Array& other);
     ~Array();
 
+	T& operator[](unsigned int index);
+	const T& operator[](unsigned int index) const;
     unsigned int size() const;
+	class OutOfBoundsException : public std::exception {
+		const char* what() const throw() {
+			return "Invalid index : Out of Bounds";
+		};
+	};
 };
 
 #endif
